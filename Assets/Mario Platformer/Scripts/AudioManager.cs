@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -7,9 +8,6 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip BackgroundMusic;
     public AudioClip Boing;
-    public AudioClip BossMusic;
-    public AudioClip Bullet;
-    public AudioClip Checkpoint;
     public AudioClip Coin;
     public AudioClip Die;
     public AudioClip Defeat;
@@ -17,14 +15,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip Heal;
     public AudioClip Fireball;
     public AudioClip FireballHit;
-    public AudioClip ItemBox;
     public AudioClip Jump;
     public AudioClip Ouch;
-    public AudioClip Pipe;
     public AudioClip PowerUp;
     public AudioClip PowerDown;
     public AudioClip Stomp;
     public AudioClip Star;
+    public AudioClip ThankYou;
     public AudioClip Victory;
 
     public static AudioManager Instance;
@@ -35,8 +32,6 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         else
             Instance = this;
-
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

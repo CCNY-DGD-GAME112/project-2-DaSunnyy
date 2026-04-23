@@ -4,6 +4,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 2;
     public int currentHealth;
+    public int scoreValue = 100;
 
     private bool dead = false;
 
@@ -50,6 +51,8 @@ public class EnemyHealth : MonoBehaviour
 
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null) rb.linearVelocity = Vector3.zero;
+
+        ScoreManager.Instance?.AddScore(scoreValue);
 
         Destroy(gameObject);
         AudioManager.Instance?.PlaySFX(AudioManager.Instance.EnemyDie);

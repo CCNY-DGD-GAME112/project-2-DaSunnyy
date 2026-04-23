@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6318951206421457108
+--- !u!1001 &3371072565592105014
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.468935
+      value: 25.632818
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.007562888
+      value: -3.5038102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.783386
+      value: 47.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,10 +62,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
       propertyPath: m_Name
-      value: Jump Panel
+      value: Jump Panel 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5606682659198544414}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5444153709165428492}
   m_SourcePrefab: {fileID: 100100000, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
+--- !u!1 &2452523850297220455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c095c1b9fa205d246b441eb9cd68b0ca, type: 3}
+  m_PrefabInstance: {fileID: 3371072565592105014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5606682659198544414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452523850297220455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f276482e73b1954681a72f1804e0e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpPanel
+  bounceForce: 30
+  playerTag: Player
+--- !u!65 &5444153709165428492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452523850297220455}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 320.16696, y: 317.48376, z: 238.30536}
+  m_Center: {x: 0.76776505, y: 154.38257, z: 0}

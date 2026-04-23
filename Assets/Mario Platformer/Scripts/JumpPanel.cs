@@ -28,7 +28,7 @@ public class JumpPanel : MonoBehaviour
 
         if (animator != null)
         {
-            animator.CrossFade("Mario_Jump", 0.05f);
+            animator.CrossFade("Mario_JumpStart", 0.05f);
 
             AudioManager.Instance?.PlaySFX(AudioManager.Instance.Boing);
         }

@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class Goomba : MonoBehaviour, PlayerMovement.IEnemy
 {
-    [Header("Movement")]
     public float moveSpeed = 2f;
     public float visionRange = 50f;
     public float stopDistance = 1.2f;
 
-    [Header("Detection")]
     public LayerMask whatIsPlayer;
     public float detectHeightOffset = 0.5f;
 

@@ -2,20 +2,16 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    [Header("References")]
     public PlayerHealth health;
     public PlayerMovement movement;
 
-    [Header("Fireball")]
     public GameObject fireballPrefab;
     public Transform firePoint;
     public MouseCamera cam;
 
-    [Header("Mushroom")]
     public float mushroomDuration = 30f;
     public float mushroomScaleMultiplier = 2f;
 
-    [Header("Fire Flower")]
     public float fireDuration = 30f;
     public float fireCooldown = 0.3f;
 
@@ -117,6 +113,7 @@ public class PowerUp : MonoBehaviour
     public void FireballEvent()
     {
         TryShootFireball();
+        AudioManager.Instance?.PlaySFX(AudioManager.Instance.Fireball);
     }
 
     void DeactivateFire()

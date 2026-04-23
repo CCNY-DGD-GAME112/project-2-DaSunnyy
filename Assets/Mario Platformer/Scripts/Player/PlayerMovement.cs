@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,11 +14,15 @@ public class PlayerMovement : MonoBehaviour
     public float stompBounceForce = 50f;
     public Transform cameraTransform;
     public PowerUp powerUp;
-
     public GameObject AttackHitbox;
     public int Damage = 1;
     public float MushroomMultiplier = 2f;
     public float comboResetTime = 0.8f;
+    public float poseDuration = 3f;
+
+    public bool isRunning;
+    public bool isGrounded;
+    public bool jumpHeld;
 
     private bool attackQueued;
     private Rigidbody rb;
@@ -26,15 +31,15 @@ public class PlayerMovement : MonoBehaviour
     private float stompCooldown = 0.1f;
     private float lastStompTime;
 
-    public bool isRunning;
-    public bool isGrounded;
-    public bool jumpHeld;
-
     private int comboStep = 0;
     private float lastAttackTime;
     private bool canChain;
-
     private bool isPoweredUp = false;
+    private bool isVictorious;
+
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.3f;
+    [SerializeField] private LayerMask groundLayer;
 
     void Awake()
     {
@@ -74,8 +79,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started && isGrounded)
         {
-            animator.SetTrigger("Jump");
-
+            animator.Play("Mario_JumpStart", 0, 0f);
             AudioManager.Instance?.PlaySFX(AudioManager.Instance.Jump);
 
             rb.linearVelocity = new Vector3(
@@ -112,14 +116,12 @@ public class PlayerMovement : MonoBehaviour
         if (!powerUp.IsFireActive()) return;
 
         animator.SetTrigger("Fire");
-        AudioManager.Instance?.PlaySFX(AudioManager.Instance.Fireball);
     }
 
     void Update()
     {
         AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
-        Debug.Log(Time.timeScale);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
         if (comboStep == 3)
         {
@@ -191,8 +193,7 @@ public class PlayerMovement : MonoBehaviour
         bool isMoving = move.sqrMagnitude > 0.01f;
 
         animator.SetBool("isGrounded", isGrounded);
-        animator.SetBool("isFalling", !isGrounded && vel.y < -0.2f);
-
+        animator.SetBool("isFalling", rb.linearVelocity.y < -0.1f && !isGrounded);
         animator.SetBool("isWalking", isMoving && !isRunning && isGrounded);
         animator.SetBool("isRunning", isMoving && isRunning && isGrounded);
     }
@@ -348,5 +349,36 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("ExitAttack");
         }
+    }
+
+    public void TriggerVictory()
+    {
+        if (isVictorious) return;
+
+        isVictorious = true;
+        StartCoroutine(VictorySequence());
+    }
+
+    IEnumerator VictorySequence()
+    {
+        rb.linearVelocity = Vector3.zero;
+        this.enabled = false;
+
+        animator.SetTrigger("Victory");
+
+        yield return new WaitForSeconds(0.5f);
+
+        animator.SetBool("isPosing", true);
+
+        yield return new WaitForSeconds(1f);
+
+        AudioManager.Instance?.PlaySFX(AudioManager.Instance.ThankYou);
+
+        float thankYouLength = AudioManager.Instance.ThankYou.length;
+        yield return new WaitForSeconds(thankYouLength);
+
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
