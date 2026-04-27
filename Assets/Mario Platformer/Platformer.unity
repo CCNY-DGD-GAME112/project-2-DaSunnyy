@@ -424,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -676,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1685,7 +1685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2520,7 +2520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3570,7 +3570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3952,7 +3952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5136,7 +5136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6003,7 +6003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6301,6 +6301,14 @@ PrefabInstance:
     - target: {fileID: 3210654290990277464, guid: 1767b238c2b5d3e47882d53aa2c05c7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240433748447616667, guid: 1767b238c2b5d3e47882d53aa2c05c7c, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642178407567638092, guid: 1767b238c2b5d3e47882d53aa2c05c7c, type: 3}
+      propertyPath: maxHealth
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6670,7 +6678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7040,7 +7048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8105,7 +8113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8532,7 +8540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9520,7 +9528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9638,7 +9646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10180,7 +10188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
       propertyPath: bounceForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10252,6 +10260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830683631938532218, guid: 7c3b49365a8d7f84abb249b156341c9c, type: 3}
+      propertyPath: Damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 830683631938532218, guid: 7c3b49365a8d7f84abb249b156341c9c, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -10965,6 +10977,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5606682659198544414, guid: 6a16d0bd81b33ad459459e17a1a191af, type: 3}
+      propertyPath: bounceForce
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11603,6 +11619,10 @@ PrefabInstance:
     - target: {fileID: 629842822769959772, guid: 5fe4f70643d0ce248b11b678708c0620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524528261213761825, guid: 5fe4f70643d0ce248b11b678708c0620, type: 3}
+      propertyPath: stopDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

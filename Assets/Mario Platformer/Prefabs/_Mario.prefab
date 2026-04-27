@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81ed49e31765bd1429e05c709c94fcf3, type: 3}
       propertyPath: m_Name
-      value: Mario
+      value: _Mario
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81ed49e31765bd1429e05c709c94fcf3, type: 3}
       propertyPath: m_Layer
@@ -2099,7 +2099,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   powerUp: {fileID: 0}
   AttackHitbox: {fileID: 750065454452361392}
-  Damage: 1
+  Damage: 2
   MushroomMultiplier: 2
   comboResetTime: 0.8
   poseDuration: 3
@@ -2238,9 +2238,9 @@ MonoBehaviour:
   fireballPrefab: {fileID: 761278442848677713, guid: 911ff10d380bde3468b0a5e4cbe09632, type: 3}
   firePoint: {fileID: 3358842145712000870}
   cam: {fileID: 0}
-  mushroomDuration: 30
+  mushroomDuration: 60
   mushroomScaleMultiplier: 2
-  fireDuration: 30
+  fireDuration: 60
   fireCooldown: 0.3
 --- !u!65 &7850821594152052632
 BoxCollider:

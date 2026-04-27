@@ -470,13 +470,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009039c07a993fc428c6d2bca3b8a843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Goomba
-  moveSpeed: 30
+  moveSpeed: 15
   visionRange: 75
-  stopDistance: 0.5
+  stopDistance: 1
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  detectHeightOffset: 0.5
+  detectHeightOffset: 1
 --- !u!114 &8498101593151524092
 MonoBehaviour:
   m_ObjectHideFlags: 0

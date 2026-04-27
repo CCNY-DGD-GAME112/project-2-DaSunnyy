@@ -475,13 +475,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009039c07a993fc428c6d2bca3b8a843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Goomba
-  moveSpeed: 20
+  moveSpeed: 12
   visionRange: 55
-  stopDistance: 0.5
+  stopDistance: 0.75
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  detectHeightOffset: 0.5
+  detectHeightOffset: 0.75
 --- !u!114 &5665525480434827786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4d11f156006e54582a3f32e4f955c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 5
+  maxHealth: 6
   currentHealth: 0
   scoreValue: 300
 --- !u!4 &7709120900119936898 stripped

@@ -9,10 +9,10 @@ public class PowerUp : MonoBehaviour
     public Transform firePoint;
     public MouseCamera cam;
 
-    public float mushroomDuration = 30f;
+    public float mushroomDuration = 60f;
     public float mushroomScaleMultiplier = 2f;
 
-    public float fireDuration = 30f;
+    public float fireDuration = 60f;
     public float fireCooldown = 0.3f;
 
     public bool IsMushroomActive() => mushroomActive;

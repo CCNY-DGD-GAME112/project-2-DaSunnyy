@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform cameraTransform;
     public PowerUp powerUp;
     public GameObject AttackHitbox;
-    public int Damage = 1;
+    public int Damage = 2;
     public float MushroomMultiplier = 2f;
     public float comboResetTime = 0.8f;
     public float poseDuration = 3f;

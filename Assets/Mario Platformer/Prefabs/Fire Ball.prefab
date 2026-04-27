@@ -9682,15 +9682,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c9fc4b2231e3b9543a21c37ee998b841, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.08
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9fc4b2231e3b9543a21c37ee998b841, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.08
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9fc4b2231e3b9543a21c37ee998b841, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.08
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9fc4b2231e3b9543a21c37ee998b841, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9923,5 +9923,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 35
+  m_Radius: 40
   m_Center: {x: 0, y: 0, z: 0}
