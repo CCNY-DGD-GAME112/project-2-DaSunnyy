@@ -2,21 +2,62 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
+  - Brick
+  - Question Block
+  - Coin
+  - Pipe
+  - Wall
+  - Super Mushroom
+  - Fire Flower
+  - Super Star Goal
+  - Enemy
+  - Fire Ball
+  - Koopa Shell
+  - "void FixedUpdate()\r\n{\r\n    // =========================\r\n    // WALL SLIDING\r\n   
+    // =========================\r\n    isWallSliding = false;\r\n\r\n    if (!isGrounded
+    && CheckWall(out RaycastHit hit))\r\n    {\r\n        isWallSliding = true;\r\n       
+    wallNormal = hit.normal;\r\n\r\n        if (rb.linearVelocity.y < -wallSlideSpeed)\r\n       
+    {\r\n            rb.linearVelocity = new Vector3(\r\n                rb.linearVelocity.x,\r\n               
+    -wallSlideSpeed,\r\n                rb.linearVelocity.z\r\n            );\r\n       
+    }\r\n    }\r\n\r\n    // =========================\r\n    // MOVEMENT INPUT\r\n   
+    // =========================\r\n    Vector3 move = new Vector3(moveInput.x, 0f,
+    moveInput.y);\r\n\r\n    bool hasInput = move.sqrMagnitude > 0.01f;\r\n\r\n   
+    if (hasInput)\r\n    {\r\n        Quaternion targetRotation = Quaternion.LookRotation(move,
+    Vector3.up);\r\n\r\n        transform.rotation = Quaternion.RotateTowards(\r\n           
+    transform.rotation,\r\n            targetRotation,\r\n            rotationSpeed
+    * Time.fixedDeltaTime\r\n        );\r\n    }\r\n\r\n    float currentSpeed =
+    speed;\r\n\r\n    if (isCrouching)\r\n    {\r\n        currentSpeed *= crouchSpeedMultiplier;\r\n       
+    hasInput = false;\r\n    }\r\n\r\n    // =========================\r\n    //
+    APPLY HORIZONTAL MOVEMENT\r\n    // =========================\r\n    Vector3
+    vel = rb.linearVelocity;\r\n\r\n    vel.x = move.x * currentSpeed;\r\n    vel.z
+    = move.z * currentSpeed;\r\n\r\n    // =========================\r\n    // GRAVITY
+    MODIFIERS\r\n    // =========================\r\n    if (!isWallSliding)\r\n   
+    {\r\n        if (vel.y < -0.1f)\r\n            vel.y += gravity * (fallMultiplier
+    - 1f) * Time.fixedDeltaTime;\r\n        else if (vel.y > 0.1f && !jumpHeld)\r\n           
+    vel.y += gravity * (lowJumpMultiplier - 1f) * Time.fixedDeltaTime;\r\n    }\r\n\r\n   
+    rb.linearVelocity = vel;\r\n\r\n    // =========================\r\n    // ANIMATIONS\r\n   
+    // =========================\r\n    bool isMoving = hasInput;\r\n\r\n    animator.SetBool(\"isGrounded\",
+    isGrounded);\r\n    animator.SetBool(\"isFalling\", !isGrounded && vel.y < -0.2f);\r\n   
+    animator.SetBool(\"isWalking\", isMoving && !isRunning && isGrounded);\r\n   
+    animator.SetBool(\"isRunning\", isMoving && isRunning && isGrounded);\r\n\r\n   
+    // =========================\r\n    // RESET JUMP BUFFER\r\n    // =========================\r\n   
+    if (isGrounded)\r\n        jumpHeld = false;\r\n}"
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Enemy
+  - PlayerAttack
+  - EnemyAttack
+  - Projectile
   - 
   - 
   - 
@@ -50,27 +91,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
